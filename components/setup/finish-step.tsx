@@ -7,7 +7,10 @@ interface FinishStepProps {
 export const FinishStep: FC<FinishStepProps> = ({ displayName }) => {
   return (
     <div className="space-y-4">
-      <div>Welcome to Chatt, {displayName.split(" ")[0]}!</div>
+      <div>
+        Welcome to Chatt
+        {displayName.length > 0 ? `, ${displayName.split(" ")[0]}` : null}!
+      </div>
 
       <div>Click next to start chatting.</div>
     </div>
